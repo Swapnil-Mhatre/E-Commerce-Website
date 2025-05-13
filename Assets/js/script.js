@@ -107,7 +107,7 @@ const handleNav = async () => {
 
     window.addEventListener("resize", () => checkWidth());
 
-    window.onload(checkWidth());
+    window.onload = checkWidth();
   }
   handleMenu();
 };
@@ -214,6 +214,9 @@ const handleProductsDisplay = async () => {
   const productPage = document.querySelector(".products-section .wrapper");
   const latestProductsCon = document.querySelector(".products .wrapper");
   const categoryList = document.querySelector(".category-name-list");
+  const filterCatBtn = document.querySelector(".filter-category");
+  const filterSection = document.querySelector(".filter-section");
+  let isFilterOpen = false;
   let addToCartBtn;
   let productDetail;
   const params = new URLSearchParams(window.location.search);
@@ -264,6 +267,35 @@ const handleProductsDisplay = async () => {
   let selectedCategory;
   let selectedPrice = Infinity;
   selectedCategory = category;
+
+  function checkWidth() {
+    if (window.innerWidth >= 495) {
+      filterSection.removeAttribute("hidden");
+      filterCatBtn.setAttribute("hidden", "");
+      
+      isFilterOpen = false;
+    }
+    if (window.innerWidth <= 495) {
+      filterCatBtn.removeAttribute("hidden");
+      filterSection.setAttribute("hidden", "");
+    }
+  }
+
+  function openFilters() {
+    filterCatBtn.addEventListener("click", () => {
+      if (isFilterOpen === false) {
+        filterSection.removeAttribute("hidden");
+        isFilterOpen = true;
+      } else {
+        filterSection.setAttribute("hidden", "");
+        isFilterOpen = false;
+      }
+    });
+
+    window.addEventListener("resize", checkWidth);
+    window.onload = checkWidth();
+  }
+  if (filterCatBtn) openFilters();
 
   function applyFilters() {
     let filtered = products;
