@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Men",
+        "description": "Stylish Product for Mens with perfect blend of texture",
+        "imageUrl": "../Images/Categories/Mens.avif"
+    },
+    {
+        "title": "Women",
+        "description": "Blended Product with stylish Design for Women",
+        "imageUrl": "../Images/Categories/womens.avif"
+    },
+    {
+        "title": "Kids",
+        "description": "Kids Collection Stylish Products",
+        "imageUrl": "../Images/Categories/Kids.avif"
+    },
+    {
+        "title": "Bags",
+        "description": "From travels to Office Use Bags",
+        "imageUrl": "../Images/Categories/OfficeBags.avif"
+    },
+    {
+        "title": "Footwears",
+        "description": "Footwears from occation to Everyday",
+        "imageUrl": "../Images/Categories/footwear.avif"
+    },
+    {
+        "title": "Watches",
+        "description": "Premium Design Watches for you every occation",
+        "imageUrl": "../Images/Categories/watches.avif"
+    }
+]

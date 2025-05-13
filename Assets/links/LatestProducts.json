@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "productTitle": "Campus Sutra Classic Self Design Spread Collar Casual Shirt",
+        "imageUrl": "./Assets/Images/Products/Mens_Casual_Shirt.jpg",
+        "description": "Brown self design opaque Casual shirt, has a spread collar, button placket, long regular sleeves, curved hem",
+        "price": "680",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Men"
+    },
+    {
+        "id": 5,
+        "productTitle": "GoSriKi Women Printed Regular Kurta with Palazzos",
+        "imageUrl": "./Assets/Images/Products/Women_kurti.jpg",
+        "description": "Geometric printed, anarkali shape, Regular style, Round neck, sleeveless no sleeves, Na pockets",
+        "price": "750",
+        "ratings": 3,
+        "isAddedToCart": false,
+        "category": "Women"
+    },
+    {
+        "id": 9,
+        "productTitle": "Marks & Spencer Unisex Kids Graphic Printed Rounded Neck Cotton T-shirt",
+        "imageUrl": "./Assets/Images/Products/Kids_Boy_T-shirt.jpg",
+        "description": "Grey & White t-shirt for unisex kids Graphic Regular Length Round neck short sleeves knitted",
+        "price": "880",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Kids"
+    },
+    {
+        "id": 13,
+        "productTitle": "Skybags Charm 01 Cameo Girls Blue Graphic Printed Backpack",
+        "imageUrl": "./Assets/Images/Products/Bags1.jpg",
+        "description": "Size & fit Length-33, Width-25, Height-49 cms Material & Car Polyester Wipe with a cleanm dry cloth when needed",
+        "price": "1840",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Bags"
+    }
+]

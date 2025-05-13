@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "productTitle": "Campus Sutra Classic Self Design Spread Collar Casual Shirt",
+        "imageUrl": "../Images/products/Mens_Casual_Shirt.jpg",
+        "description": "Brown self design opaque Casual shirt, has a spread collar, button placket, long regular sleeves, curved hem",
+        "price": "680",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Men"
+    },
+    {
+        "id": 2,
+        "productTitle": "Levis Men 65504 Skinny Fit Light Fade Stretchable Jeans",
+        "imageUrl": "../Images/products/Mens_Pants.jpg",
+        "description": "Medium Shade, light fade blue jeans, skinny fits, mid-rise, Clean look, Stretchable, 5 Pockets",
+        "price": "1200",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Men"
+    },
+    {
+        "id": 3,
+        "productTitle": "Louis Phillippe Jeans Polo Collar Slim Fit T-Shirt",
+        "imageUrl": "../Images/products/Mens_Collar_T-shirt.jpg",
+        "description": "Navy Blue Tshirt for men,, solid, Regular Length, Polo collar, short, regular sleeves, knitted cotton fabric",
+        "price": "1100",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Men"
+    },
+    {
+        "id": 4,
+        "productTitle": "IVOC Men Solid Cotton Cargos Trouser",
+        "imageUrl": "../Images/products/Mens_Trouser.jpg",
+        "description": "Grey Woven Cargos, Regular fit, Mid-rise, Length: regular, pattern: solid, Flat-front, with no pleats design Feature: plain",
+        "price": "950",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Men"
+    },
+    {
+        "id": 5,
+        "productTitle": "GoSriKi Women Printed Regular Kurta with Palazzos",
+        "imageUrl": "../Images/products/Women_kurti.jpg",
+        "description": "Geometric printed, anarkali shape, Regular style, Round neck, sleeveless no sleeves, Na pockets",
+        "price": "750",
+        "ratings": 3,
+        "isAddedToCart": false,
+        "category": "Women"
+    },
+    {
+        "id": 6,
+        "productTitle": "anayna Women Black Ethnic Motifs Pure Cotton Kurta with Palazzos",
+        "imageUrl": "../Images/products/Women_Kruti1.jpg",
+        "description": "Black Solid Kurta with Palazzos with Dupatta",
+        "price": "1200",
+        "ratings": 5,
+        "isAddedToCart": false,
+        "category": "Women"
+    },
+    {
+        "id": 7,
+        "productTitle": "MINOS Floral Printed Mandarian Collar Maxi Longline Top",
+        "imageUrl": "../Images/products/Women_Tops.jpg",
+        "description": "Navy blue and purple longline maxi top, Floral Print mandarian collar Long, regular sleeves Knitted",
+        "price": "580",
+        "ratings": 3,
+        "isAddedToCart": false,
+        "category": "Women"
+    },
+    {
+        "id": 8,
+        "productTitle": "Miss Chase Women High-Rise Regular Length Streatchable Bootcut Denim Jeans",
+        "imageUrl": "../Images/products/Women_Jeans.jpg",
+        "description": "Darkk shade, light fade blue jeans Wide legs, high-rise Clean look Stretchable 5 pockets",
+        "price": "1290",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Women"
+    },
+    {
+        "id": 9,
+        "productTitle": "Marks & Spencer Unisex Kids Graphic Printed Rounded Neck Cotton T-shirt",
+        "imageUrl": "../Images/products/Kids_Boy_T-shirt.jpg",
+        "description": "Grey & White t-shirt for unisex kids Graphic Regular Length Round neck short sleeves knitted",
+        "price": "880",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Kids"
+    },
+    {
+        "id": 10,
+        "productTitle": "H&M Girls Patterened Cotton Dress",
+        "imageUrl": "../Images/products/Kids_Girls_Dresses.jpg",
+        "description": "Comfortable sleeveless dress in soft, patterned cotton jersey with a gathered seam at the waist and gently flared skirt",
+        "price": "400",
+        "ratings": 5,
+        "isAddedToCart": false,
+        "category": "Kids"
+    },
+    {
+        "id": 11,
+        "productTitle": "ADIDAS Kids Woven Design Erish 1.0 Runnign Shoes",
+        "imageUrl": "../Images/products/Kids_Shoes.jpg",
+        "description": "Main Material: Mesh upper/ Rubber Outsole, Brand color: Pink Fusion / Core Black, Woven upper Regular fit SLip-on Construction with elastic strap",
+        "price": "1380",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Kids"
+    },
+    {
+        "id": 12,
+        "productTitle": "Clapjoy Board Game Activity Toys and Games",
+        "imageUrl": "../Images/products/Kids_GameBoard.jpg",
+        "description": "Type: board game Age: 5 years plus Color: Beige, Operation Mode: manual operation",
+        "price": "680",
+        "ratings": 3,
+        "isAddedToCart": false,
+        "category": "Kids"
+    },
+    {
+        "id": 13,
+        "productTitle": "Skybags Charm 01 Cameo Girls Blue Graphic Printed Backpack",
+        "imageUrl": "../Images/products/Bags1.jpg",
+        "description": "Size & fit Length-33, Width-25, Height-49 cms Material & Car Polyester Wipe with a cleanm dry cloth when needed",
+        "price": "1840",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Bags"
+    },
+    {
+        "id": 14,
+        "productTitle": "Aristocat Cabin Luggage Trolley Suitcase",
+        "imageUrl": "../Images/products/Bags2.jpg",
+        "description": "Teal four-wheel cabin luggage trolley suitcase (Strolly), secured with combination lock One handle on top and one on side, has one push button retractable trolley corner-mounted inline skate wheels",
+        "price": "1400",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Bags"
+    },
+    {
+        "id": 15,
+        "productTitle": "Lavie Tara Women Framed Clutch",
+        "imageUrl": "../Images/products/Bags3.jpg",
+        "description": "Gold Toned textured box clutches Has sholuder Strap 1 main compartment with click closure",
+        "price": "895",
+        "ratings": 5,
+        "isAddedToCart": false,
+        "category": "Bags"
+    },
+    {
+        "id": 16,
+        "productTitle": "Skybas kids Ergonomics Backpack",
+        "imageUrl": "../Images/products/Bags4.jpg",
+        "description": "Green Solid fashion backpacks Non-padded haul loop 1 main compartment with zip closure, 1 zip pocket, 1 stash pocket non-padded back",
+        "price": "1100",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Bags"
+    },
+    {
+        "id": 17,
+        "productTitle": "GLAM STORY Women Embroidered Pointed Toe Mules Flats",
+        "imageUrl": "../Images/products/Footwear1.jpg",
+        "description": "A pair of off white mules Upper material: synthethic leather Cushioned footbed Textured and patterned outsole",
+        "price": "870",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Footwears"
+    },
+    {
+        "id": 18,
+        "productTitle": "Roadster ter Lifestyle Co. Men Black Slip-On Casual Sandals",
+        "imageUrl": "../Images/products/Footwear2.jpg",
+        "description": "Black & beige solid sandals, secured with a buckle closure Faux Leather upper Cushioned Footbed Textured and patterned rubber outsole",
+        "price": "800",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Footwears"
+    },
+    {
+        "id": 19,
+        "productTitle": "Red Tape  Men Lace-Ups Round Toe Sneaker",
+        "imageUrl": "../Images/products/Footwear3.jpg",
+        "description": "A pair of round toe cream-coloured sneaker, has regular styling, Lace-ups detail Pu upper Cushioned footebed Textured and patterned outsole",
+        "price": "1150",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Footwears"
+    },
+    {
+        "id": 20,
+        "productTitle": "INVICTUS Men Round Toe Faux Leather Formal Slip ON Loafers",
+        "imageUrl": "../Images/products/Footwear4.jpg",
+        "description": "A pair of Black textured Rounde-toe Formal Loafers with regular styling has a slip on closure Synthetic upper Cushioned footbed Textured and patterned TPR outsole",
+        "price": "1000",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Footwears"
+    },
+    {
+        "id": 21,
+        "productTitle": "WRONG Men SIlver-Toned Analogue Watch WRG00048A",
+        "imageUrl": "../Images/products/Watches1.jpg",
+        "description": "Display: Analogue Movement: Quartz Power source: Battery Dial style: Printed round brass dial Featuers: Rest Time Starp style: Blue regular, synthetic",
+        "price": "695",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Watches"
+    },
+    {
+        "id": 22,
+        "productTitle": "Mast & Harbour Women Textured Dial & Stainless Steel Straps Analogue Watches",
+        "imageUrl": "../Images/products/Watches2.jpg",
+        "description": "Display: Analogue Movement: Quartz Power source: Battery Dial style: Printed round brass dial Featuers: Rest Time Starp style: Blue regular, synthetic",
+        "price": "750",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Watches"
+    },
+    {
+        "id": 23,
+        "productTitle": "Roadster ter Lifestyle Co Men Black Analogue and Digital Watch MFB-PN-S",
+        "imageUrl": "../Images/products/Watches3.jpg",
+        "description": "Display: Analogue Movement: Quartz Power source: Battery Dial style: Printed round brass dial Featuers: Rest Time Starp style: Blue regular, synthetic",
+        "price": "620",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Watches"
+    },
+    {
+        "id": 24,
+        "productTitle": "Sonata Men Black & Silver-Toned Analogue Watch 77083SM05W",
+        "imageUrl": "../Images/products/Watches4.jpg",
+        "description": "Display: Analogue Movement: Quartz Power source: Battery Dial style: Printed round brass dial Featuers: Rest Time Starp style: Blue regular, synthetic",
+        "price": "990",
+        "ratings": 4,
+        "isAddedToCart": false,
+        "category": "Watches"
+    }
+]
