@@ -68,9 +68,14 @@ header {
 .search-field {
     background: #F6F5F2;
     position: relative;
-    padding: 1px 4px;
+    padding: 0px 4px;
     border: 1px solid black;
     border-radius: 30px;
+    overflow: hidden;
+}
+
+.search-field i {
+    font-size: 24px;
 }
 
 .searched-items {
@@ -97,8 +102,11 @@ header {
 }
 
 input.search-box {
-    width: 220px;
-    height: 2vw;
+    position: relative;
+    min-width: 200px;
+    max-width: 350px;
+    height: 30px;
+    padding-left: 5px;
     background: transparent;
     border: none;
     outline: none;
@@ -229,14 +237,14 @@ input.search-box {
 }
 
 .category-List li {
-    height: 275px;
+    min-height: 275px;
     padding: 7px;
     width: 205px;
     background: #e2983d;
 }
 
 .category-List li a {
-    height: inherit;
+    height: 275px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -246,7 +254,7 @@ input.search-box {
 
 .category-List li a p {
     color: #fff;
-    font-size: 1.7vw;
+    font-size: 2vw;
 }
 
 .category-List li img {
@@ -1190,6 +1198,10 @@ input[type="submit"] {
 
     .category-List {
         gap: 15px 10px;
+    }
+
+    .category-List li a p {
+        font-size: 2.8vw;
     }
 
     /* Latest Product */
