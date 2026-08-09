@@ -14,7 +14,7 @@ const handleNav = async () => {
   const listProducts2 = await fetch("../links/ProductData.json")
     .then((response) => response.json())
     .then((productData) => productData)
-    .catch((err) => console.log(err));
+    .catch((err) => console.error(err));
 
   function highlightSection() {
     document.addEventListener("DOMContentLoaded", () => {
@@ -30,11 +30,19 @@ const handleNav = async () => {
   highlightSection();
 
   function clutterProduct(products, dets, searchList, val) {
+    const searchValue = dets.target.value.trim().toLowerCase();
+
+    if (searchValue === "") {
+      searchList.innerHTML = "";
+      searchList.classList.remove("searched-items");
+      isOpen = false;
+      return;
+    }
+
     const searchProduct = products.filter((product) =>
-      product.productTitle
-        .toLowerCase()
-        .includes(dets.target.value.toLowerCase())
+      product.productTitle.toLowerCase().includes(searchValue),
     );
+
     if (searchProduct.length > 0) {
       let clutter = "";
       searchProduct.forEach((product) => {
@@ -172,7 +180,7 @@ const handleSlides = () => {
 
   arrows.forEach((arrow) => {
     arrow.addEventListener("click", (e) =>
-      e.target.id === "forward" ? forward() : backward()
+      e.target.id === "forward" ? forward() : backward(),
     );
   });
 };
@@ -272,7 +280,7 @@ const handleProductsDisplay = async () => {
     if (window.innerWidth >= 495) {
       filterSection.removeAttribute("hidden");
       filterCatBtn.setAttribute("hidden", "");
-      
+
       isFilterOpen = false;
     }
     if (window.innerWidth <= 495) {
@@ -328,7 +336,7 @@ const handleProductsDisplay = async () => {
           <span>Clear Filter</span>
           <i class="ri-close-line"></i>
         </button>
-      `
+      `,
       );
     }
   }
@@ -405,7 +413,7 @@ const handleProductsDisplay = async () => {
       const similarProduct = products.filter(
         (product) =>
           productDetail.category == product.category &&
-          productDetail.id !== product.id
+          productDetail.id !== product.id,
       );
       displayProducts(similarProduct, relatedProductCon, "product");
       let ratingFill = addRating(productDetail);
@@ -423,7 +431,7 @@ const handleProductsDisplay = async () => {
                 <p class="product-description">${productDetail.description}</p>
                 <button class="add-to-cart-btn" id="addToCart">Add To Cart</button>
             </div>
-        </div>`
+        </div>`,
       );
       addToCartBtn = document.querySelector("#addToCart");
       handleCartClick();
@@ -434,7 +442,7 @@ const handleProductsDisplay = async () => {
     const addedProduct = JSON.parse(localStorage.getItem("AddedProduct")) || [];
     addToCartBtn.addEventListener("click", () => {
       const existingProduct = addedProduct.find(
-        (product) => product.id === productDetail.id
+        (product) => product.id === productDetail.id,
       );
 
       if (existingProduct) {
@@ -601,7 +609,7 @@ const handleCartSection = () => {
         const buttons = e.target.closest("button");
         if (buttons) {
           const productCardId = parseInt(
-            buttons.closest(".cart-product-card").id
+            buttons.closest(".cart-product-card").id,
           );
           if (e.target.className === "ri-add-line") {
             handleQuantity(productCardId, "add");
@@ -619,10 +627,10 @@ const handleCartSection = () => {
     removeBtn.forEach((button) => {
       button.addEventListener("click", (e) => {
         const productCardId = parseInt(
-          e.target.closest(".cart-product-card").id
+          e.target.closest(".cart-product-card").id,
         );
         newCartItems = cartItems.filter(
-          (cartItem) => cartItem.id !== productCardId
+          (cartItem) => cartItem.id !== productCardId,
         );
         cartItems = newCartItems;
         localStorage.setItem("AddedProduct", JSON.stringify(newCartItems));
@@ -686,7 +694,7 @@ const handleCheckoutSection = () => {
 
   function submittionConfirmation() {
     const orderConfirmationCon = document.querySelector(
-      ".order-confirmation .wrapper"
+      ".order-confirmation .wrapper",
     );
     const emailCon = document.querySelector("#emailAddress");
     const orderIdCon = document.querySelector("#orderId");
