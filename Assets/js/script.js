@@ -1,3 +1,5 @@
+import { getProducts, getLatestProduct, getCategory } from "./api/dataApi.js";
+
 const handleNav = async () => {
   const searchBoxes = document.querySelectorAll(".search-box");
   const hambergerIconCon = document.querySelector(".hamberger-menu-icon");
@@ -5,16 +7,7 @@ const handleNav = async () => {
   const hambergerCon = document.querySelector(".hamberger-menu");
   const closeMenuIcon = document.querySelector(".hamberger-menu ul>div");
   let isOpen = false;
-
-  const listProducts = await fetch("./Assets/links/ProductData.json")
-    .then((response) => response.json())
-    .then((productData) => productData)
-    .catch((err) => console.log(err));
-
-  const listProducts2 = await fetch("../links/ProductData.json")
-    .then((response) => response.json())
-    .then((productData) => productData)
-    .catch((err) => console.error(err));
+  const listProducts = await getProducts();
 
   function highlightSection() {
     document.addEventListener("DOMContentLoaded", () => {
@@ -67,8 +60,7 @@ const handleNav = async () => {
       const searchList = searchBox.parentElement.querySelector(".search-list");
 
       searchBox.addEventListener("input", (e) => {
-        if (listProducts) clutterProduct(listProducts, e, searchList, 1);
-        if (listProducts2) clutterProduct(listProducts2, e, searchList, 2);
+        clutterProduct(listProducts, e, searchList, 1);
       });
 
       document.addEventListener("click", (e) => {
@@ -230,16 +222,10 @@ const handleProductsDisplay = async () => {
   const params = new URLSearchParams(window.location.search);
   const category = params.get("category");
   const id = params.get("id");
-  const products = await fetch("../links/ProductData.json")
-    .then((response) => response.json())
-    .then((productData) => productData)
-    .catch((err) => console.error(err));
+  const products = await getProducts();
 
   if (latestProductsCon) {
-    const latestProducts = await fetch("./Assets/links/LatestProducts.json")
-      .then((response) => response.json())
-      .then((latestProductsData) => latestProductsData)
-      .catch((err) => console.log(err));
+    const latestProducts = await getLatestProduct();
     displayProducts(latestProducts, latestProductsCon, "home");
   }
 
@@ -476,11 +462,8 @@ handleProductsDisplay();
 
 const handleCategories = async () => {
   const categoryCon = document.querySelector(".category-section .wrapper");
-  const categories = await fetch("../links/Categories.json")
-    .then((response) => response.json())
-    .then((categoryData) => categoryData)
-    .catch((err) => console.error(err));
-
+  const categories = await getCategory();
+  
   function displayCategory(categories) {
     let clutter = "";
     categories.map((category) => {
@@ -528,9 +511,9 @@ const handleCartSection = () => {
             <div class="content">
                 <h2 class="product-title">${cartItem.productTitle}</h2>
                 <div class="product-quantity">
-                <button class="decrement"><i class="ri-subtract-line"></i></button>
-                <h3 class="quantity">${cartItem.quantity}</h3>
-                <button class="increment"><i class="ri-add-line"></i></button>
+                  <button class="decrement"><i class="ri-subtract-line"></i></button>
+                  <h3 class="quantity">${cartItem.quantity}</h3>
+                  <button class="increment"><i class="ri-add-line"></i></button>
                 </div>
                 <div class="product-size">${cartItem.size}</div>
                 <div class="product-price">₹ ${cartItem.totalPrice}</div>
