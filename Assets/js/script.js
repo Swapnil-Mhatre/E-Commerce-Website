@@ -1,13 +1,13 @@
 import { getProducts, getLatestProduct, getCategory } from "./api/dataApi.js";
+import { searchProduct } from "./search/search.js";
 
 const handleNav = async () => {
+  const handleSearchInputs = await searchProduct();
   const searchBoxes = document.querySelectorAll(".search-box");
   const hambergerIconCon = document.querySelector(".hamberger-menu-icon");
   const hambergerIcon = document.querySelector(".hamberger-menu-icon>i");
   const hambergerCon = document.querySelector(".hamberger-menu");
   const closeMenuIcon = document.querySelector(".hamberger-menu ul>div");
-  let isOpen = false;
-  const listProducts = await getProducts();
 
   function highlightSection() {
     document.addEventListener("DOMContentLoaded", () => {
@@ -21,61 +21,6 @@ const handleNav = async () => {
     });
   }
   highlightSection();
-
-  function clutterProduct(products, dets, searchList, val) {
-    const searchValue = dets.target.value.trim().toLowerCase();
-
-    if (searchValue === "") {
-      searchList.innerHTML = "";
-      searchList.classList.remove("searched-items");
-      isOpen = false;
-      return;
-    }
-
-    const searchProduct = products.filter((product) =>
-      product.productTitle.toLowerCase().includes(searchValue),
-    );
-
-    if (searchProduct.length > 0) {
-      let clutter = "";
-      searchProduct.forEach((product) => {
-        const link =
-          val === 1
-            ? `./Assets/pages/Product-details.html?id=${product.id}`
-            : `./Product-details.html?id=${product.id}`;
-        clutter += `<a href="${link}">${product.productTitle}</a>`;
-      });
-      searchList.innerHTML = clutter;
-      searchList.classList.add("searched-items");
-      isOpen = true;
-    } else {
-      searchList.innerHTML = "";
-      searchList.classList.remove("searched-items");
-      isOpen = false;
-    }
-  }
-
-  function handleSearchInputs() {
-    searchBoxes.forEach((searchBox) => {
-      const searchList = searchBox.parentElement.querySelector(".search-list");
-
-      searchBox.addEventListener("input", (e) => {
-        clutterProduct(listProducts, e, searchList, 1);
-      });
-
-      document.addEventListener("click", (e) => {
-        const clickedInside =
-          searchBox.contains(e.target) || searchList.contains(e.target);
-
-        if (!clickedInside && isOpen) {
-          searchList.classList.remove("searched-items");
-          searchList.innerHTML = "";
-          searchBox.value = "";
-          isOpen = false;
-        }
-      });
-    });
-  }
 
   if (searchBoxes) {
     handleSearchInputs();
@@ -463,7 +408,7 @@ handleProductsDisplay();
 const handleCategories = async () => {
   const categoryCon = document.querySelector(".category-section .wrapper");
   const categories = await getCategory();
-  
+
   function displayCategory(categories) {
     let clutter = "";
     categories.map((category) => {
