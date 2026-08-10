@@ -46,7 +46,6 @@ export const searchProduct = async () => {
       let clutter = "";
       searchProduct.forEach((product) => {
         const link = getProductDetailsPath(product.id);
-        console.log(link);
         clutter += `<a href="${link}">${product.productTitle}</a>`;
       });
       searchList.innerHTML = clutter;
