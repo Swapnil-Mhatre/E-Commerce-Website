@@ -83,7 +83,3 @@ This project helped me practice:
 ## Author
 
 Swapnil Mhatre
-
-```
-
-```
