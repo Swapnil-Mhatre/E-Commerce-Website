@@ -1,3 +1,6 @@
+import { getLatestProduct } from "../api/dataApi.js";
+import { displayProducts } from "../products/products.js";
+
 const handleSlides = () => {
   const slides = document.querySelector(".slides");
   const arrows = document.querySelectorAll(".arrows i");
@@ -62,3 +65,13 @@ const handleSlides = () => {
   });
 };
 handleSlides();
+
+const displayLatestProducts = async () => {
+  const latestProductsCon = document.querySelector(".products .wrapper");
+
+  if (latestProductsCon) {
+    const latestProducts = await getLatestProduct();
+    displayProducts(latestProducts, latestProductsCon, "home");
+  }
+};
+displayLatestProducts();
