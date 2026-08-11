@@ -1,4 +1,5 @@
 import { searchProduct } from "../search/search.js";
+import { getHomepagePath, getPageLinksPath } from "../utils/paths.js";
 import { isMobile } from "../utils/responsive.js";
 
 const handleNav = async () => {
@@ -10,14 +11,12 @@ const handleNav = async () => {
   const closeMenuIcon = document.querySelector(".hamberger-menu ul>div");
 
   function highlightSection() {
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuLinks = document.querySelectorAll(".menu-mid li a");
+    const menuLinks = document.querySelectorAll(".menu-mid li a");
 
-      menuLinks.forEach((link) => {
-        if (link.href === window.location.href) {
-          link.classList.add("bold");
-        }
-      });
+    menuLinks.forEach((link) => {
+      if (link.href === window.location.href) {
+        link.classList.add("bold");
+      }
     });
   }
   highlightSection();
@@ -55,3 +54,56 @@ const handleNav = async () => {
   })();
 };
 handleNav();
+
+const createHeaderStruture = () => {
+  const header = document.querySelector("header");
+  let clutter = `
+  <nav class="navbar">
+    <div class="hamberger-menu-icon" hidden>
+        <i class="ri-menu-line"></i>
+        <div class="hamberger-menu">
+            <ul>
+                <a href="${getHomepagePath()}" class="logo">Fashion Plays</a>
+                <div><i class="ri-close-line"></i></div>
+                <li class="search-field">
+                    <label for="search" class="search-label">
+                        <i class="ri-search-line"></i>
+                    </label>
+                    <input type="text" class="search-box" name="search" placeholder="Search Products here">
+                    <div class="search-list">
+                    </div>
+                </li>
+                <li><a href="${getPageLinksPath("Products")}">Products</a></li>
+                <li><a href="${getPageLinksPath("Category")}">Category</a></li>
+                <li><a href="${getPageLinksPath("About-Us")}">About Us</a></li>
+                <li><a href="${getPageLinksPath("Contact")}">Contact Us</a></li>
+                <li><a href="${getPageLinksPath("Cart")}"><i class="ri-shopping-cart-line"></i> Shopping Cart</a></li>
+            </ul>
+        </div>
+    </div>
+    <a href="${getHomepagePath()}" class="logo">Fashion Plays</a>
+    <div class="menu-list">
+        <ul class="menu-mid">
+            <li><a href="${getPageLinksPath("Products")}">Products</a></li>
+            <li><a href="${getPageLinksPath("Category")}">Category</a></li>
+            <li><a href="${getPageLinksPath("About-Us")}">About Us</a></li>
+            <li><a href="${getPageLinksPath("Contact")}">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="menu-list">
+        <ul class="menu-right">
+            <li class="search-field">
+                <label for="search" class="search-label">
+                    <i class="ri-search-line"></i>
+                </label>
+                <input type="text" class="search-box" name="search" placeholder="Search Products here">
+                <div class="search-list">
+                </div>
+            </li>
+            <li><a href="${getPageLinksPath("Cart")}"><i class="ri-shopping-cart-line"></i></a></li>
+        </ul>
+    </div>
+  </nav>`;
+  header.innerHTML = clutter;
+};
+createHeaderStruture();

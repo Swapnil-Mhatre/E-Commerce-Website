@@ -21,7 +21,7 @@ export function checkpage(page, productId) {
   }
 }
 
-export function handleCartClick(addToCartBtn) {
+export function handleCartClick(addToCartBtn, productDetail) {
   const addedProduct = JSON.parse(localStorage.getItem("AddedProduct")) || [];
   addToCartBtn.addEventListener("click", () => {
     const existingProduct = addedProduct.find(

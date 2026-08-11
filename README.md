@@ -22,6 +22,7 @@ A browser-based e-commerce platform built using HTML, CSS, and JavaScript. Users
 
 ## Project Structure
 
+```text
 E-Commerce-Website/
 │
 ├── Assets/
@@ -55,6 +56,7 @@ E-Commerce-Website/
 │
 ├── index.html
 └── README.md
+```
 
 ## Getting Started
 
@@ -81,3 +83,7 @@ This project helped me practice:
 ## Author
 
 Swapnil Mhatre
+
+```
+
+```

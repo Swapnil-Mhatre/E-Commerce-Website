@@ -66,7 +66,7 @@ async function displayProductDetail() {
         </div>`,
     );
     let addToCartBtn = document.querySelector("#addToCart");
-    handleCartClick(addToCartBtn);
+    handleCartClick(addToCartBtn, productDetail);
   }
 }
 displayProductDetail();
