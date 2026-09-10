@@ -1,7 +1,7 @@
 function isHomePage() {
   return (
     window.location.pathname.endsWith("/index.html") ||
-    window.location.pathname === "/"
+    window.location.pathname.endsWith("/E-Commerce-Website/")
   );
 }
 
